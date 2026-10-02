@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#092040">
+  <meta name="description" content="Pesquisa de satisfação e avaliação do público do Projeto PULSA SP.">
+  <title>Escuta PULSA SP — Avaliação do Público</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__decor hero__decor--one" aria-hidden="true"></div>
+    <div class="hero__decor hero__decor--two" aria-hidden="true"></div>
+    <div class="shell hero__content">
+      <img class="brand" src="assets/marca-pulsa.png" alt="Identidade visual do PULSA SP">
+      <div class="hero__copy">
+        <p class="eyebrow">ESCUTA PULSA</p>
+        <h1>Conta pra gente como foi sua experiência.</h1>
+        <p>Sua resposta ajuda a acompanhar a qualidade, o acesso e o impacto das atividades culturais do PULSA SP.</p>
+        <span class="time-chip">Leva cerca de 1 minuto</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell main-content">
+    <section class="intro-card" aria-labelledby="antes-de-comecar">
+      <div class="section-number" aria-hidden="true">01</div>
+      <div>
+        <h2 id="antes-de-comecar">Antes de começar</h2>
+        <p>Responda pensando na atividade que você acabou de assistir. Não é preciso saber nenhum código do evento.</p>
+      </div>
+    </section>
+
+    <form id="pulsa-form" class="form-card" method="post" target="pulsa-submit-frame" novalidate>
+      <input type="hidden" name="submission_id" id="submission-id" value="">
+
+      <section class="form-section" aria-labelledby="identificacao-title">
+        <div class="section-heading">
+          <span class="section-kicker">IDENTIFICAÇÃO</span>
+          <h2 id="identificacao-title">Sobre você e a atividade</h2>
+          <p>Os campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
+        </div>
+
+        <div class="field" data-field="nome">
+          <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+          <input id="nome" name="nome" type="text" autocomplete="name" maxlength="120" required>
+        </div>
+
+        <div class="field" data-field="celular">
+          <label for="celular">Celular/WhatsApp <span aria-hidden="true">*</span></label>
+          <input id="celular" name="celular" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" placeholder="(11) 99999-9999" required>
+          <p class="help">Usaremos este dado somente para registro, controle de duplicidade, monitoramento e avaliação.</p>
+        </div>
+
+        <div class="field" data-field="espetaculo">
+          <label for="espetaculo">Qual foi o nome do espetáculo ou atividade que você assistiu? <span aria-hidden="true">*</span></label>
+          <input id="espetaculo" name="espetaculo" type="text" maxlength="200" required>
+          <p class="help">Escreva como o nome foi anunciado ou como você se lembra.</p>
+        </div>
+
+        <div class="field" data-field="local">
+          <label for="local">Onde aconteceu? <span aria-hidden="true">*</span></label>
+          <input id="local" name="local" type="text" maxlength="200" required>
+          <p class="help">Pode ser o nome do teatro, biblioteca, praça, CEU, centro cultural, escola ou outro local.</p>
+        </div>
+
+        <div class="field" data-field="bairro_regiao">
+          <label for="bairro_regiao">Bairro ou região <span class="optional">(opcional)</span></label>
+          <input id="bairro_regiao" name="bairro_regiao" type="text" maxlength="120">
+        </div>
+      </section>
+
+      <section class="form-section form-section--survey" aria-labelledby="avaliacao-title">
+        <div class="section-heading">
+          <span class="section-kicker">AVALIAÇÃO</span>
+          <h2 id="avaliacao-title">Como foi sua experiência?</h2>
+          <p>Não existe resposta certa ou errada. Queremos conhecer sua percepção.</p>
+        </div>
+
+        <fieldset class="question" data-field="p1">
+          <legend><span class="question-number">1</span> Como você avalia sua experiência nesta atividade? <span aria-hidden="true">*</span></legend>
+          <div class="rating-grid">
+            <label><input type="radio" name="p1" value="1" required><span><strong>1</strong><small>Muito ruim</small></span></label>
+            <label><input type="radio" name="p1" value="2"><span><strong>2</strong><small>Ruim</small></span></label>
+            <label><input type="radio" name="p1" value="3"><span><strong>3</strong><small>Regular</small></span></label>
+            <label><input type="radio" name="p1" value="4"><span><strong>4</strong><small>Boa</small></span></label>
+            <label><input type="radio" name="p1" value="5"><span><strong>5</strong><small>Excelente</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-field="p2">
+          <legend><span class="question-number">2</span> Como você avalia a qualidade artística e a relevância cultural da atividade? <span aria-hidden="true">*</span></legend>
+          <div class="rating-grid">
+            <label><input type="radio" name="p2" value="1" required><span><strong>1</strong><small>Muito baixa</small></span></label>
+            <label><input type="radio" name="p2" value="2"><span><strong>2</strong><small>Baixa</small></span></label>
+            <label><input type="radio" name="p2" value="3"><span><strong>3</strong><small>Regular</small></span></label>
+            <label><input type="radio" name="p2" value="4"><span><strong>4</strong><small>Boa</small></span></label>
+            <label><input type="radio" name="p2" value="5"><span><strong>5</strong><small>Excelente</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-field="p3">
+          <legend><span class="question-number">3</span> Esta atividade ampliou ou facilitou seu acesso à cultura? <span aria-hidden="true">*</span></legend>
+          <div class="option-grid option-grid--three">
+            <label><input type="radio" name="p3" value="Sim" required><span>Sim</span></label>
+            <label><input type="radio" name="p3" value="Parcialmente"><span>Parcialmente</span></label>
+            <label><input type="radio" name="p3" value="Não"><span>Não</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-field="p4">
+          <legend><span class="question-number">4</span> Você se sentiu representado(a) ou percebeu diversidade de pessoas, linguagens e territórios nesta atividade? <span aria-hidden="true">*</span></legend>
+          <div class="option-grid option-grid--four">
+            <label><input type="radio" name="p4" value="Sim" required><span>Sim</span></label>
+            <label><input type="radio" name="p4" value="Parcialmente"><span>Parcialmente</span></label>
+            <label><input type="radio" name="p4" value="Não"><span>Não</span></label>
+            <label><input type="radio" name="p4" value="Não sei avaliar"><span>Não sei avaliar</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-field="p5">
+          <legend><span class="question-number">5</span> A atividade contribuiu para aproximar você das ações culturais do seu território ou da cidade? <span aria-hidden="true">*</span></legend>
+          <div class="option-grid option-grid--three">
+            <label><input type="radio" name="p5" value="Sim" required><span>Sim</span></label>
+            <label><input type="radio" name="p5" value="Parcialmente"><span>Parcialmente</span></label>
+            <label><input type="radio" name="p5" value="Não"><span>Não</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-field="p6">
+          <legend><span class="question-number">6</span> Você encontrou alguma barreira de acesso ou acessibilidade para participar ou acompanhar a atividade? <span aria-hidden="true">*</span></legend>
+          <div class="option-grid option-grid--two">
+            <label><input type="radio" name="p6" value="Não" required><span>Não</span></label>
+            <label><input type="radio" name="p6" value="Sim"><span>Sim</span></label>
+          </div>
+          <div id="barreira-detalhe-wrap" class="conditional-field" hidden>
+            <label for="p6-barreira-detalhe">Conte brevemente qual foi a barreira encontrada. <span aria-hidden="true">*</span></label>
+            <textarea id="p6-barreira-detalhe" name="p6_barreira_detalhe" rows="4" maxlength="500"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-field="p7">
+          <legend><span class="question-number">7</span> Você gostaria de participar de outras atividades culturais como esta? <span aria-hidden="true">*</span></legend>
+          <div class="option-grid option-grid--three">
+            <label><input type="radio" name="p7" value="Sim" required><span>Sim</span></label>
+            <label><input type="radio" name="p7" value="Talvez"><span>Talvez</span></label>
+            <label><input type="radio" name="p7" value="Não"><span>Não</span></label>
+          </div>
+        </fieldset>
+
+        <div class="question question--text" data-field="p8">
+          <label for="p8"><span class="question-number">8</span> Quer deixar um comentário, sugestão ou contar como foi sua experiência? <span class="optional">(opcional)</span></label>
+          <textarea id="p8" name="p8" rows="5" maxlength="1500" placeholder="Escreva aqui, se quiser."></textarea>
+          <div class="char-counter" id="p8-counter" aria-live="off">0/1500</div>
+        </div>
+      </section>
+
+      <section class="privacy-box" aria-labelledby="privacidade-title">
+        <div class="privacy-icon" aria-hidden="true">✓</div>
+        <div>
+          <h2 id="privacidade-title">Uso dos seus dados</h2>
+          <p>Nome e celular serão utilizados exclusivamente para registro, controle de duplicidade, monitoramento e avaliação do Projeto PULSA SP. Esses dados não serão utilizados para envio de publicidade sem autorização específica.</p>
+          <label class="consent" data-field="privacidade_ciente">
+            <input type="checkbox" name="privacidade_ciente" value="true" required>
+            <span>Li e estou ciente do uso dos meus dados para esta finalidade.</span>
+          </label>
+        </div>
+      </section>
+
+      <div id="error-summary" class="error-summary" role="alert" hidden></div>
+      <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+      <div class="actions">
+        <button id="submit-button" class="submit-button" type="submit">
+          <span class="submit-button__label">Enviar minha avaliação</span>
+          <span class="submit-button__arrow" aria-hidden="true">→</span>
+        </button>
+        <button id="retry-button" class="retry-button" type="button" hidden>Tentar novamente</button>
+      </div>
+    </form>
+
+    <section id="success-panel" class="success-panel" aria-live="polite" hidden>
+      <div class="success-mark" aria-hidden="true">✓</div>
+      <h2>Obrigada!</h2>
+      <p>Sua avaliação foi registrada e contribui para o monitoramento do PULSA SP.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <p><strong>PULSA SP</strong> — Escuta e Avaliação do Público</p>
+      <p>Pesquisa voluntária. Os resultados representam a percepção das pessoas que responderam.</p>
+    </div>
+  </footer>
+
+  <iframe id="pulsa-submit-frame" name="pulsa-submit-frame" title="Envio da avaliação" hidden></iframe>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
