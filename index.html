@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#092040">
-  <meta name="description" content="Pesquisa de satisfação e avaliação do público do Projeto PULSA SP.">
-  <title>Escuta PULSA SP — Avaliação do Público</title>
+  <meta name="description" content="Pesquisa anônima de satisfação do público do Projeto PULSA SP.">
+  <title>Escuta PULSA SP — Pesquisa de Satisfação</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@
       <div class="hero__copy">
         <p class="eyebrow">ESCUTA PULSA</p>
         <h1>Conta pra gente como foi sua experiência.</h1>
-        <p>Sua resposta ajuda a acompanhar a qualidade, o acesso e o impacto das atividades culturais do PULSA SP.</p>
-        <span class="time-chip">Leva cerca de 1 minuto</span>
+        <p>Sua opinião ajuda a avaliar as atividades do PULSA SP e a melhorar as próximas ações.</p>
+        <span class="time-chip">Pesquisa anônima · leva cerca de 2 minutos</span>
       </div>
     </div>
   </header>
@@ -31,174 +31,106 @@
       <div class="section-number" aria-hidden="true">01</div>
       <div>
         <h2 id="antes-de-comecar">Antes de começar</h2>
-        <p>Responda pensando na atividade que você acabou de assistir. Não é preciso saber nenhum código do evento.</p>
+        <p><strong>Não escreva seu nome.</strong> Para relacionar a resposta à apresentação, informe somente o espetáculo/atividade e o local.</p>
       </div>
     </section>
 
     <form id="pulsa-form" class="form-card" method="post" target="pulsa-submit-frame" novalidate>
       <input type="hidden" name="submission_id" id="submission-id" value="">
+      <input type="hidden" name="nome" id="legacy-nome" value="PESQUISA_ANONIMA_PREFEITURA_V2">
+      <input type="hidden" name="celular" id="legacy-celular" value="">
+      <input type="hidden" name="p1" id="legacy-p1" value="">
+      <input type="hidden" name="p2" id="legacy-p2" value="">
+      <input type="hidden" name="p3" id="legacy-p3" value="">
+      <input type="hidden" name="p4" id="legacy-p4" value="Não sei avaliar">
+      <input type="hidden" name="p5" id="legacy-p5" value="">
+      <input type="hidden" name="p6" id="legacy-p6" value="Não">
+      <input type="hidden" name="p6_barreira_detalhe" value="">
+      <input type="hidden" name="p7" id="legacy-p7" value="">
+      <input type="hidden" name="p8" id="legacy-p8" value="">
+      <input type="hidden" name="privacidade_ciente" value="true">
 
       <section class="form-section" aria-labelledby="identificacao-title">
         <div class="section-heading">
-          <span class="section-kicker">IDENTIFICAÇÃO</span>
-          <h2 id="identificacao-title">Sobre você e a atividade</h2>
-          <p>Os campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
+          <span class="section-kicker">ATIVIDADE</span>
+          <h2 id="identificacao-title">Qual apresentação você viu?</h2>
+          <p>Esses dados servem apenas para identificar a atividade avaliada.</p>
         </div>
-
-        <div class="field" data-field="nome">
-          <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
-          <input id="nome" name="nome" type="text" autocomplete="name" maxlength="120" required>
-        </div>
-
-        <div class="field" data-field="celular">
-          <label for="celular">Celular/WhatsApp <span aria-hidden="true">*</span></label>
-          <input id="celular" name="celular" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" placeholder="(11) 99999-9999" required>
-          <p class="help">Usaremos este dado somente para registro, controle de duplicidade, monitoramento e avaliação.</p>
-        </div>
-
         <div class="field" data-field="espetaculo">
-          <label for="espetaculo">Qual foi o nome do espetáculo ou atividade que você assistiu? <span aria-hidden="true">*</span></label>
+          <label for="espetaculo">Nome do espetáculo ou atividade <span aria-hidden="true">*</span></label>
           <input id="espetaculo" name="espetaculo" type="text" maxlength="200" required>
           <p class="help">Escreva como o nome foi anunciado ou como você se lembra.</p>
         </div>
-
         <div class="field" data-field="local">
           <label for="local">Onde aconteceu? <span aria-hidden="true">*</span></label>
           <input id="local" name="local" type="text" maxlength="200" required>
-          <p class="help">Pode ser o nome do teatro, biblioteca, praça, CEU, centro cultural, escola ou outro local.</p>
-        </div>
-
-        <div class="field" data-field="bairro_regiao">
-          <label for="bairro_regiao">Bairro ou região <span class="optional">(opcional)</span></label>
-          <input id="bairro_regiao" name="bairro_regiao" type="text" maxlength="120">
+          <p class="help">Ex.: casa de cultura, teatro, praça, CEU, biblioteca ou outro espaço.</p>
         </div>
       </section>
 
       <section class="form-section form-section--survey" aria-labelledby="avaliacao-title">
         <div class="section-heading">
-          <span class="section-kicker">AVALIAÇÃO</span>
-          <h2 id="avaliacao-title">Como foi sua experiência?</h2>
-          <p>Não existe resposta certa ou errada. Queremos conhecer sua percepção.</p>
+          <span class="section-kicker">PESQUISA DE SATISFAÇÃO</span>
+          <h2 id="avaliacao-title">Sua experiência no PULSA SP</h2>
+          <p>Marque a alternativa que melhor representa sua experiência.</p>
         </div>
 
-        <fieldset class="question" data-field="p1">
-          <legend><span class="question-number">1</span> Como você avalia sua experiência nesta atividade? <span aria-hidden="true">*</span></legend>
-          <div class="rating-grid">
-            <label><input type="radio" name="p1" value="1" required><span><strong>1</strong><small>Muito ruim</small></span></label>
-            <label><input type="radio" name="p1" value="2"><span><strong>2</strong><small>Ruim</small></span></label>
-            <label><input type="radio" name="p1" value="3"><span><strong>3</strong><small>Regular</small></span></label>
-            <label><input type="radio" name="p1" value="4"><span><strong>4</strong><small>Boa</small></span></label>
-            <label><input type="radio" name="p1" value="5"><span><strong>5</strong><small>Excelente</small></span></label>
-          </div>
-        </fieldset>
+        <fieldset class="question" data-field="q1_prefeitura"><legend><span class="question-number">1</span> O que você achou da atividade de hoje? *</legend><div class="option-grid option-grid--four">
+          <label><input type="radio" name="q1_prefeitura" value="Muito boa" required><span>Muito boa</span></label><label><input type="radio" name="q1_prefeitura" value="Boa"><span>Boa</span></label><label><input type="radio" name="q1_prefeitura" value="Regular"><span>Regular</span></label><label><input type="radio" name="q1_prefeitura" value="Ruim"><span>Ruim</span></label>
+        </div></fieldset>
 
-        <fieldset class="question" data-field="p2">
-          <legend><span class="question-number">2</span> Como você avalia a qualidade artística e a relevância cultural da atividade? <span aria-hidden="true">*</span></legend>
-          <div class="rating-grid">
-            <label><input type="radio" name="p2" value="1" required><span><strong>1</strong><small>Muito baixa</small></span></label>
-            <label><input type="radio" name="p2" value="2"><span><strong>2</strong><small>Baixa</small></span></label>
-            <label><input type="radio" name="p2" value="3"><span><strong>3</strong><small>Regular</small></span></label>
-            <label><input type="radio" name="p2" value="4"><span><strong>4</strong><small>Boa</small></span></label>
-            <label><input type="radio" name="p2" value="5"><span><strong>5</strong><small>Excelente</small></span></label>
-          </div>
-        </fieldset>
+        <fieldset class="question" data-field="q2_prefeitura"><legend><span class="question-number">2</span> Você se sentiu bem recebido(a) neste espaço? *</legend><div class="option-grid option-grid--three">
+          <label><input type="radio" name="q2_prefeitura" value="Sim" required><span>Sim</span></label><label><input type="radio" name="q2_prefeitura" value="Mais ou menos"><span>Mais ou menos</span></label><label><input type="radio" name="q2_prefeitura" value="Não"><span>Não</span></label>
+        </div></fieldset>
 
-        <fieldset class="question" data-field="p3">
-          <legend><span class="question-number">3</span> Esta atividade ampliou ou facilitou seu acesso à cultura? <span aria-hidden="true">*</span></legend>
-          <div class="option-grid option-grid--three">
-            <label><input type="radio" name="p3" value="Sim" required><span>Sim</span></label>
-            <label><input type="radio" name="p3" value="Parcialmente"><span>Parcialmente</span></label>
-            <label><input type="radio" name="p3" value="Não"><span>Não</span></label>
-          </div>
-        </fieldset>
+        <fieldset class="question" data-field="q3_prefeitura"><legend><span class="question-number">3</span> A atividade foi interessante para você? *</legend><div class="option-grid option-grid--four">
+          <label><input type="radio" name="q3_prefeitura" value="Muito" required><span>Muito</span></label><label><input type="radio" name="q3_prefeitura" value="Sim"><span>Sim</span></label><label><input type="radio" name="q3_prefeitura" value="Pouco"><span>Pouco</span></label><label><input type="radio" name="q3_prefeitura" value="Não"><span>Não</span></label>
+        </div></fieldset>
 
-        <fieldset class="question" data-field="p4">
-          <legend><span class="question-number">4</span> Você se sentiu representado(a) ou percebeu diversidade de pessoas, linguagens e territórios nesta atividade? <span aria-hidden="true">*</span></legend>
-          <div class="option-grid option-grid--four">
-            <label><input type="radio" name="p4" value="Sim" required><span>Sim</span></label>
-            <label><input type="radio" name="p4" value="Parcialmente"><span>Parcialmente</span></label>
-            <label><input type="radio" name="p4" value="Não"><span>Não</span></label>
-            <label><input type="radio" name="p4" value="Não sei avaliar"><span>Não sei avaliar</span></label>
-          </div>
-        </fieldset>
+        <fieldset class="question" data-field="q4_prefeitura"><legend><span class="question-number">4</span> Qual foi o principal resultado desta atividade para você? *</legend><div class="option-grid">
+          <label><input type="radio" name="q4_prefeitura" value="Diversão / lazer" required><span>Diversão / lazer</span></label>
+          <label><input type="radio" name="q4_prefeitura" value="Contato com arte e cultura"><span>Contato com arte e cultura</span></label>
+          <label><input type="radio" name="q4_prefeitura" value="Conhecimento"><span>Conhecimento</span></label>
+          <label><input type="radio" name="q4_prefeitura" value="Conheci um artista ou trabalho novo"><span>Conheci um artista ou trabalho novo</span></label>
+          <label><input type="radio" name="q4_prefeitura" value="Encontro com outras pessoas"><span>Encontro com outras pessoas</span></label>
+          <label><input type="radio" name="q4_prefeitura" value="Nenhum destes"><span>Nenhum destes</span></label>
+        </div></fieldset>
 
-        <fieldset class="question" data-field="p5">
-          <legend><span class="question-number">5</span> A atividade contribuiu para aproximar você das ações culturais do seu território ou da cidade? <span aria-hidden="true">*</span></legend>
-          <div class="option-grid option-grid--three">
-            <label><input type="radio" name="p5" value="Sim" required><span>Sim</span></label>
-            <label><input type="radio" name="p5" value="Parcialmente"><span>Parcialmente</span></label>
-            <label><input type="radio" name="p5" value="Não"><span>Não</span></label>
-          </div>
-        </fieldset>
+        <fieldset class="question" data-field="q5_prefeitura"><legend><span class="question-number">5</span> Você participaria de outro evento do PULSA SP? *</legend><div class="option-grid option-grid--three">
+          <label><input type="radio" name="q5_prefeitura" value="Sim" required><span>Sim</span></label><label><input type="radio" name="q5_prefeitura" value="Talvez"><span>Talvez</span></label><label><input type="radio" name="q5_prefeitura" value="Não"><span>Não</span></label>
+        </div></fieldset>
 
-        <fieldset class="question" data-field="p6">
-          <legend><span class="question-number">6</span> Você encontrou alguma barreira de acesso ou acessibilidade para participar ou acompanhar a atividade? <span aria-hidden="true">*</span></legend>
-          <div class="option-grid option-grid--two">
-            <label><input type="radio" name="p6" value="Não" required><span>Não</span></label>
-            <label><input type="radio" name="p6" value="Sim"><span>Sim</span></label>
-          </div>
-          <div id="barreira-detalhe-wrap" class="conditional-field" hidden>
-            <label for="p6-barreira-detalhe">Conte brevemente qual foi a barreira encontrada. <span aria-hidden="true">*</span></label>
-            <textarea id="p6-barreira-detalhe" name="p6_barreira_detalhe" rows="4" maxlength="500"></textarea>
-          </div>
-        </fieldset>
+        <fieldset class="question" data-field="q6_prefeitura"><legend><span class="question-number">6</span> Você costuma participar de atividades culturais como esta? *</legend><div class="option-grid">
+          <label><input type="radio" name="q6_prefeitura" value="Frequentemente" required><span>Frequentemente</span></label><label><input type="radio" name="q6_prefeitura" value="Às vezes"><span>Às vezes</span></label><label><input type="radio" name="q6_prefeitura" value="Raramente"><span>Raramente</span></label><label><input type="radio" name="q6_prefeitura" value="Esta foi uma das primeiras vezes"><span>Esta foi uma das primeiras vezes</span></label><label><input type="radio" name="q6_prefeitura" value="Esta foi a primeira vez"><span>Esta foi a primeira vez</span></label>
+        </div></fieldset>
 
-        <fieldset class="question" data-field="p7">
-          <legend><span class="question-number">7</span> Você gostaria de participar de outras atividades culturais como esta? <span aria-hidden="true">*</span></legend>
-          <div class="option-grid option-grid--three">
-            <label><input type="radio" name="p7" value="Sim" required><span>Sim</span></label>
-            <label><input type="radio" name="p7" value="Talvez"><span>Talvez</span></label>
-            <label><input type="radio" name="p7" value="Não"><span>Não</span></label>
-          </div>
-        </fieldset>
+        <fieldset class="question" data-field="q7_prefeitura"><legend><span class="question-number">7</span> Qual é a sua faixa etária? *</legend><div class="option-grid option-grid--four">
+          <label><input type="radio" name="q7_prefeitura" value="Até 12" required><span>Até 12</span></label><label><input type="radio" name="q7_prefeitura" value="13 a 17"><span>13 a 17</span></label><label><input type="radio" name="q7_prefeitura" value="18 a 29"><span>18 a 29</span></label><label><input type="radio" name="q7_prefeitura" value="30 a 44"><span>30 a 44</span></label><label><input type="radio" name="q7_prefeitura" value="45 a 59"><span>45 a 59</span></label><label><input type="radio" name="q7_prefeitura" value="60 a 69"><span>60 a 69</span></label><label><input type="radio" name="q7_prefeitura" value="70 a 79"><span>70 a 79</span></label><label><input type="radio" name="q7_prefeitura" value="80 anos ou mais"><span>80 anos ou mais</span></label>
+        </div></fieldset>
 
-        <div class="question question--text" data-field="p8">
-          <label for="p8"><span class="question-number">8</span> Quer deixar um comentário, sugestão ou contar como foi sua experiência? <span class="optional">(opcional)</span></label>
-          <textarea id="p8" name="p8" rows="5" maxlength="1500" placeholder="Escreva aqui, se quiser."></textarea>
-          <div class="char-counter" id="p8-counter" aria-live="off">0/1500</div>
-        </div>
+        <fieldset class="question" data-field="q8_prefeitura"><legend><span class="question-number">8</span> Em qual Região de São Paulo você mora? *</legend><div class="option-grid option-grid--three">
+          <label><input type="radio" name="q8_prefeitura" value="Zona Sul" required><span>Zona Sul</span></label><label><input type="radio" name="q8_prefeitura" value="Zona Leste"><span>Zona Leste</span></label><label><input type="radio" name="q8_prefeitura" value="Zona Oeste"><span>Zona Oeste</span></label><label><input type="radio" name="q8_prefeitura" value="Zona Norte"><span>Zona Norte</span></label><label><input type="radio" name="q8_prefeitura" value="Centro"><span>Centro</span></label><label><input type="radio" name="q8_prefeitura" value="Fora da cidade de São Paulo"><span>Fora da cidade de São Paulo</span></label>
+        </div></fieldset>
+
+        <div class="question question--text field" data-field="bairro_regiao"><label for="bairro_regiao"><span class="question-number">9</span> Qual é o seu bairro? *</label><input id="bairro_regiao" name="bairro_regiao" type="text" maxlength="120" required></div>
+
+        <fieldset class="question" data-field="q10_prefeitura"><legend><span class="question-number">10</span> Você costuma frequentar este espaço cultural? *</legend><div class="option-grid">
+          <label><input type="radio" name="q10_prefeitura" value="Frequentemente" required><span>Frequentemente</span></label><label><input type="radio" name="q10_prefeitura" value="Às vezes"><span>Às vezes</span></label><label><input type="radio" name="q10_prefeitura" value="Raramente"><span>Raramente</span></label><label><input type="radio" name="q10_prefeitura" value="Esta foi uma das primeiras vezes"><span>Esta foi uma das primeiras vezes</span></label><label><input type="radio" name="q10_prefeitura" value="Esta foi a primeira vez"><span>Esta foi a primeira vez</span></label>
+        </div></fieldset>
+
+        <div class="question question--text field" data-field="q11_prefeitura"><label for="q11_prefeitura"><span class="question-number">11</span> Como você ficou sabendo deste evento? *</label><input id="q11_prefeitura" name="q11_prefeitura" type="text" maxlength="250" placeholder="Ex.: WhatsApp, Instagram, amigos, cartaz, escola..." required></div>
       </section>
 
-      <section class="privacy-box" aria-labelledby="privacidade-title">
-        <div class="privacy-icon" aria-hidden="true">✓</div>
-        <div>
-          <h2 id="privacidade-title">Uso dos seus dados</h2>
-          <p>Nome e celular serão utilizados exclusivamente para registro, controle de duplicidade, monitoramento e avaliação do Projeto PULSA SP. Esses dados não serão utilizados para envio de publicidade sem autorização específica.</p>
-          <label class="consent" data-field="privacidade_ciente">
-            <input type="checkbox" name="privacidade_ciente" value="true" required>
-            <span>Li e estou ciente do uso dos meus dados para esta finalidade.</span>
-          </label>
-        </div>
+      <section class="privacy-box" aria-labelledby="anonima-title">
+        <div class="privacy-icon" aria-hidden="true">✓</div><div><h2 id="anonima-title">Pesquisa anônima</h2><p>Este formulário não solicita nome, CPF, telefone ou e-mail. As respostas são usadas para monitoramento e avaliação do PULSA SP.</p></div>
       </section>
-
       <div id="error-summary" class="error-summary" role="alert" hidden></div>
       <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
-
-      <div class="actions">
-        <button id="submit-button" class="submit-button" type="submit">
-          <span class="submit-button__label">Enviar minha avaliação</span>
-          <span class="submit-button__arrow" aria-hidden="true">→</span>
-        </button>
-        <button id="retry-button" class="retry-button" type="button" hidden>Tentar novamente</button>
-      </div>
+      <div class="actions"><button id="submit-button" class="submit-button" type="submit"><span class="submit-button__label">Enviar minha avaliação</span><span class="submit-button__arrow" aria-hidden="true">→</span></button><button id="retry-button" class="retry-button" type="button" hidden>Tentar novamente</button></div>
     </form>
-
-    <section id="success-panel" class="success-panel" aria-live="polite" hidden>
-      <div class="success-mark" aria-hidden="true">✓</div>
-      <h2>Obrigada!</h2>
-      <p>Sua avaliação foi registrada e contribui para o monitoramento do PULSA SP.</p>
-    </section>
+    <section id="success-panel" class="success-panel" aria-live="polite" hidden><div class="success-mark" aria-hidden="true">✓</div><h2>Obrigada!</h2><p>Sua avaliação foi registrada e contribui para o monitoramento do PULSA SP.</p></section>
   </main>
-
-  <footer class="footer">
-    <div class="shell">
-      <p><strong>PULSA SP</strong> — Escuta e Avaliação do Público</p>
-      <p>Pesquisa voluntária. Os resultados representam a percepção das pessoas que responderam.</p>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="shell"><div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><div><p><strong>PULSA SP</strong> — Pesquisa de satisfação do público</p><p>Pesquisa voluntária e anônima.</p></div><div style="margin-left:auto;text-align:center"><span style="display:block;font-size:10px;margin-bottom:5px">Realização</span><img alt="Instituto BR Arte" src="data:image/webp;base64,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" style="width:82px;height:82px;object-fit:contain;background:#fff;border-radius:12px;padding:5px"></div></div></div></footer>
   <iframe id="pulsa-submit-frame" name="pulsa-submit-frame" title="Envio da avaliação" hidden></iframe>
-  <script src="config.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+  <script src="config.js"></script><script src="app.js"></script>
+</body></html>
